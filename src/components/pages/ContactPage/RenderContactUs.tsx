@@ -17,6 +17,7 @@ const RenderContactUs = (): React.ReactElement => {
           <label htmlFor="name">Sunject</label>
           <input type="text" />
         </div>
+        <button type="submit">Send</button>
       </form>
     </div>
   );
