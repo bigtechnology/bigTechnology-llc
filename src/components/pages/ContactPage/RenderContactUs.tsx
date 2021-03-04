@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactUsForm from './ContactUsForm';
 
 const RenderContactUs = (): React.ReactElement => {
   return (
@@ -7,18 +8,7 @@ const RenderContactUs = (): React.ReactElement => {
 
       <h2>Get in Touch with us</h2>
       <h3>Please fill in the form to contact us.</h3>
-
-      <form action="">
-        <div className="contact-form">
-          <label htmlFor="name">Name</label>
-          <input type="text" />
-          <label htmlFor="name">Email</label>
-          <input type="text" />
-          <label htmlFor="name">Sunject</label>
-          <input type="text" />
-        </div>
-        <button type="submit">Send</button>
-      </form>
+      <ContactUsForm />
     </div>
   );
 };
