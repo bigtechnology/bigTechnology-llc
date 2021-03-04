@@ -1,87 +1,37 @@
-import React, { useState } from 'react';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { IProspectiveClientBody } from '../../../ProspectiveClients';
-import { Input } from '../../common';
+import React, { useCallback } from 'react';
+import { useForm } from 'react-hook-form';
 
 const ContactUsForm = (): React.ReactElement => {
-  // UseForm tools
-  const { errors, handleSubmit, clearErrors, setError } = useForm();
-  // Track submission form data
-  const [formData, setFormData] = useState<IProspectiveClientBody>();
-  /**
-   * When a user submits a Contact Us form we will use EmailJS to route the email to bigTechnology & send the user to Home or About??
-   *
-   */
-  const onSubmit: SubmitHandler<IProspectiveClientBody> = async (
-    data,
-  ): Promise<void> => {
-    try {
-      setFormData(data);
-      clearErrors();
-      console.log('Clearing Errors');
-      console.log('Pushing the user home');
-    } catch (err) {
-      console.log({ err });
-      let message: string;
-      if (err.response?.data) {
-        message = err.response.data.error;
-      } else {
-        message = 'An unknown error occured. Please press send again.';
-      }
-      setError('form', { type: 'manual', message });
-    }
-    console.log('This is the data you submitted: ', formData);
-  };
+  const { register, handleSubmit } = useForm<ContactFormData>();
+  const onSubmit = useCallback((formValues: ContactFormData) => {
+    console.log('formValues: ', formValues);
+  }, []);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Input
-        label="Name"
-        name="name"
-        id="prospect-client-name"
-        errors={errors}
-        placeholder=""
-        rules={{
-          required: 'Name is required',
-        }}
-      />
+      <label htmlFor="">Name</label>
+      <input type="text" ref={register} name="name" />
 
-      <Input
-        label="Email"
-        name="email"
-        id="prospect-client-email"
-        errors={errors}
-        placeholder=""
-        type="email"
-        rules={{
-          required: 'Email is required',
-        }}
-      />
+      <label htmlFor="">Email</label>
+      <input type="text" ref={register} name="email" />
 
-      <Input
-        label="Subject"
-        name="subject"
-        id="prospect-client-subject"
-        errors={errors}
-        placeholder=""
-        rules={{
-          required: 'Subject is required',
-        }}
-      />
+      <label htmlFor="">Subject</label>
 
-      <Input
-        label="Your Message"
-        name="message"
-        id="prospect-client-message"
-        errors={errors}
-        placeholder=""
-        rules={{
-          required: 'Message is required',
-        }}
-      />
-      <input type="submit" />
+      <input type="text" ref={register} name="subject" />
+
+      <label htmlFor="">Message</label>
+
+      <input type="text" ref={register} name="message" />
+      <button type="submit">send</button>
     </form>
   );
 };
+
+interface ContactFormData {
+  email: string;
+  name: string;
+  subject: string;
+  message: string;
+}
 
 export default ContactUsForm;
