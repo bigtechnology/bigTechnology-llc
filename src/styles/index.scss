@@ -7,7 +7,10 @@
 @import './mediaQueries.scss';
 
 // Component Stylsheets
-@import './components/pages/homePage/homePage.scss';
+@import './components/pages/homePage/homePageContainer.scss';
+@import './components/pages/homePage/homePageInfo.scss';
+@import './components/pages/homePage/renderHomePage.scss';
+
 @import './components/pages/contactUsPage/contactUsPage.scss';
 
 // Common Components

@@ -44,12 +44,12 @@ $manatee: #8c8c9c;
 $chalk: #fbf7f5;
 
 #root {
-  background-color: $manatee;
+  background-color: $chalk;
 }
 
 .App > div:not(.modal-wrapper):not(.cookie-popup) {
   min-height: 100vh;
-  background-color: $manatee;
+  background-color: $chalk;
   display: flex;
   flex-flow: column nowrap;
 }
