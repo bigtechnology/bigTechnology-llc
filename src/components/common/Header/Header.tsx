@@ -1,16 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { navigation } from '../navigationItems';
 
 const Header = (): React.ReactElement => {
-  const navigation = {
-    brand: { name: 'bigTechnology', to: '/' },
-    links: [
-      { name: 'Home', to: '/' },
-      { name: 'Contact Us', to: '/contact' },
-      { name: 'Blog', to: '/blog' },
-    ],
-  };
-
   return (
     <div className="header">
       <Link to={navigation.brand.to}>{navigation.brand.name}</Link>
