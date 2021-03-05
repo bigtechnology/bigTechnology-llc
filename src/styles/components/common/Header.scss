@@ -1,0 +1,14 @@
+.header {
+  background-color: $charcoal;
+  padding: 1rem 2rem;
+  border: 1px solid red;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .header-items {
+    font-family: $display-font;
+    font-size: 2.4rem;
+  }
+}

@@ -1,0 +1,14 @@
+// CSS Reset
+@import './reset.css';
+
+// Global Variables / Mixins
+@import './globals.scss';
+@import './mixins.scss';
+@import './mediaQueries.scss';
+
+// Component Stylsheets
+@import './components/pages/homePage/homePage.scss';
+@import './components/pages/contactUsPage/contactUsPage.scss';
+
+// Common Components
+@import './components/common/Header.scss';
