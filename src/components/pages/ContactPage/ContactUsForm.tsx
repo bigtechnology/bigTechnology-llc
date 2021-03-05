@@ -1,35 +1,47 @@
-import React, { useCallback } from 'react';
-import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com';
+import React from 'react';
 
 const ContactUsForm = (): React.ReactElement => {
-  const { register, handleSubmit } = useForm<ContactFormData>();
-  const onSubmit = useCallback((formValues: ContactFormData) => {
-    console.log('formValues: ', formValues);
-  }, []);
+  function sendEmail(e: React.FormEvent<HTMLFormElement>) {
+    emailjs
+      .sendForm(
+        'service_ippst38',
+        'contact_form',
+        e.target as HTMLFormElement,
+        'user_iHKbBGEc2ruGFHITfjH3o',
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+  }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="">Name</label>
-      <input type="text" ref={register} name="name" />
+    <form className="contact-form" onSubmit={sendEmail}>
+      <input type="text" name="name" />
+      <label>Name</label>
 
-      <label htmlFor="">Email</label>
-      <input type="text" ref={register} name="email" />
+      <input type="text" name="email" />
+      <label>Email</label>
 
-      <label htmlFor="">Subject</label>
+      <input type="email" name="subject" />
+      <label>Subject</label>
 
-      <input type="text" ref={register} name="subject" />
+      <label>Message</label>
+      <textarea name="message" />
 
-      <label htmlFor="">Message</label>
-
-      <input type="text" ref={register} name="message" />
-      <button type="submit">send</button>
+      <input type="submit" value="Send" />
     </form>
   );
 };
 
-interface ContactFormData {
-  email: string;
+interface IFormData {
   name: string;
+  email: string;
   subject: string;
   message: string;
 }
