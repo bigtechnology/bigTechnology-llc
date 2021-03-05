@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HelmetProvider>
+      <RecoilRoot>
+        <Router>
+          <App />
+        </Router>
+      </RecoilRoot>
+    </HelmetProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
