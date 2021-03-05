@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header } from '../../common';
+import { Footer } from '../../common/Footer';
 import RenderContactUs from './RenderContactUs';
 
 const ContactUsContainer = (): React.ReactElement => {
@@ -7,6 +8,7 @@ const ContactUsContainer = (): React.ReactElement => {
     <div className="contact-container">
       <Header />
       <RenderContactUs />
+      <Footer />
     </div>
   );
 };

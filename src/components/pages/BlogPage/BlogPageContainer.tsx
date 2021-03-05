@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header } from '../../common';
+import { Footer } from '../../common/Footer';
 import RenderBlogPage from './RenderBlogPage';
 
 const BlogPageContainer = (): React.ReactElement => {
@@ -7,6 +8,7 @@ const BlogPageContainer = (): React.ReactElement => {
     <div className="blog-page-container">
       <Header />
       <RenderBlogPage />
+      <Footer />
     </div>
   );
 };
