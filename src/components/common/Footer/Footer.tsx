@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { navigation } from '../navigationItems';
+import { navigation } from './footerItems';
 
 const Footer = (): React.ReactElement => {
   return (

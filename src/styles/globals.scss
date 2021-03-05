@@ -24,28 +24,32 @@ $mid: 500px;
 $tablet: 650px;
 $large: 800px;
 
-// NEW COLORS
-$blue: #3884ff;
-$lt-orange: #f7bc50;
-$orange: #f66700;
-$jade: #00b67d;
-$seafoam: #34c9ad;
-$dark-blue: #40537f;
-$white: #ffffff;
-$charcoal: #343434;
-$red: #f64141;
-$ltblue: #85c7f2;
-$bright-blue: #2462d9;
-$rose: #d97f9f;
-$lime: #bfd349;
+// COLOR Palette themes - https://www.canva.com/colors/color-palette-generator/
+// 1
+$bombay: #b4b5be;
+$outerspace: #333738;
+$driftwood: #b18742;
+$saltbox: #635b6c;
+$honeydew: #f0fff0;
+// 2
+$stromboli: #2e5e4e;
+$Bonjour: #dbd3d8;
+$cascade: #93a7aa;
+$hitgray: #a7b5b9;
+// 3 - Current Theme
+$shark: #2a2f33;
+$nomad: #bbb6a5;
+$mantle: #8c9491;
+$manatee: #8c8c9c;
+$chalk: #fbf7f5;
 
 #root {
-  background-color: $dark-blue;
+  background-color: $manatee;
 }
 
 .App > div:not(.modal-wrapper):not(.cookie-popup) {
   min-height: 100vh;
-  background-color: $dark-blue;
+  background-color: $manatee;
   display: flex;
   flex-flow: column nowrap;
 }

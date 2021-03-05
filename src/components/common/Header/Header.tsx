@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { navigation } from '../navigationItems';
+import { navigation } from './headerItems';
 
 const Header = (): React.ReactElement => {
   return (
     <div className="header">
-      <Link to={navigation.brand.to}>{navigation.brand.name}</Link>
+      <Link className="header-brand" to={navigation.brand.to}>
+        {navigation.brand.name}
+      </Link>
       <div className="header-items">
         {navigation.links.map((link, i) => (
-          <Link key={i} to={link.to}>
+          <Link className="header-links" key={i} to={link.to}>
             {link.name}
           </Link>
         ))}

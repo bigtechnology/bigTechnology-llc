@@ -1,14 +1,27 @@
 .header {
-  background-color: $charcoal;
+  background-color: $shark;
   padding: 1rem 2rem;
-  border: 1px solid red;
 
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .header-brand {
+    text-decoration: none;
+    color: $chalk;
+    font-size: 2.4rem;
+    cursor: pointer;
+  }
 
   .header-items {
-    font-family: $display-font;
-    font-size: 2.4rem;
+    padding: 1rem;
+
+    .header-links {
+      cursor: pointer;
+      text-decoration: none;
+      color: $chalk;
+      font-size: 1rem;
+      padding: 1.5rem;
+    }
   }
 }
