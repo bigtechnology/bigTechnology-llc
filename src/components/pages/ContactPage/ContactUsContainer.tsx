@@ -8,6 +8,7 @@ const ContactUsContainer = (): React.ReactElement => {
     <div className="contact-container">
       <Header />
       <RenderContactUs />
+      <br />
       <Footer />
     </div>
   );
