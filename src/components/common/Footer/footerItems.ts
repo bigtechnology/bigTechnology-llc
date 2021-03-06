@@ -9,9 +9,9 @@ export const navigation = {
       name: 'Home',
       to: '/',
     },
-    { name: 'Contact Us', to: '/contact' },
-    { name: 'Blog', to: '/blog' },
-    { name: 'IG', to: '/' },
-    { name: 'Twitter', to: '/' },
+    { name: 'Contact', to: '/contact' },
+    // { name: 'Blog', to: '/blog' },
+    // { name: 'IG', to: '/' },
+    // { name: 'Twitter', to: '/' },
   ],
 };
