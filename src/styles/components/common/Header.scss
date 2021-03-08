@@ -18,14 +18,15 @@
   }
 
   .header-items {
+    width: 150px;
     padding: 1rem;
 
     .header-links {
+      padding: 0.5rem;
       cursor: pointer;
       text-decoration: none;
       color: $chalk;
       font-size: 1rem;
-      padding: 1.5rem;
       &:hover {
         text-shadow: 0 2px 6px $chalk;
         transition: all 0.2s ease-in-out;
