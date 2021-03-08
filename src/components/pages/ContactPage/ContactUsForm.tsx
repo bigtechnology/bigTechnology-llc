@@ -22,19 +22,21 @@ const ContactUsForm = (): React.ReactElement => {
 
   return (
     <form className="contact-form" onSubmit={sendEmail}>
-      <input type="text" name="name" />
       <label>Name</label>
+      <input type="text" name="name" />
 
-      <input type="text" name="email" />
       <label>Email</label>
+      <input type="text" name="email" />
 
-      <input type="email" name="subject" />
       <label>Subject</label>
+      <input type="email" name="subject" />
 
       <label>Message</label>
       <textarea name="message" />
 
-      <input type="submit" value="Send" />
+      <button type="submit" value="Send">
+        send
+      </button>
     </form>
   );
 };

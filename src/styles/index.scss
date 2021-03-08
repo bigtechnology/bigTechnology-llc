@@ -10,8 +10,10 @@
 @import './components/pages/homePage/homePageContainer.scss';
 @import './components/pages/homePage/homePageInfo.scss';
 @import './components/pages/homePage/renderHomePage.scss';
-
-@import './components/pages/contactUsPage/contactUsPage.scss';
+@import './components/pages/contactUsPage/contactInfo.scss';
+@import './components/pages/contactUsPage/contactUsContainer.scss';
+@import './components/pages/contactUsPage/renderContactUs.scss';
+@import './components/pages/contactUsPage/contactUsForm.scss';
 
 // Common Components
 @import './components/common/Header.scss';
