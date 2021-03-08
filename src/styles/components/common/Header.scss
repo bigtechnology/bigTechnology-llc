@@ -1,0 +1,36 @@
+.header {
+  background-color: $shark;
+  padding: 1rem 2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .header-brand {
+    text-decoration: none;
+    color: $chalk;
+    font-size: 2.4rem;
+    cursor: pointer;
+    &:hover {
+      text-shadow: 0 2px 6px $chalk;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  .header-items {
+    width: 120px;
+    padding: 1rem;
+
+    .header-links {
+      padding: 0.5rem;
+      cursor: pointer;
+      text-decoration: none;
+      color: $chalk;
+      font-size: 1rem;
+      &:hover {
+        text-shadow: 0 2px 6px $chalk;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}

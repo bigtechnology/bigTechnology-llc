@@ -1,0 +1,38 @@
+.footer {
+  background-color: $shark;
+  color: $chalk;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  line-height: 1.5;
+
+  .footer-mission {
+    text-align: center;
+    padding: 1.3rem;
+
+    .footer-brand {
+      color: $chalk;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  }
+
+  .footer-items {
+    text-align: center;
+    padding: 1.2rem;
+
+    .footer-links {
+      padding: 1rem;
+      color: $chalk;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+.footer-copyrights {
+  background-color: $shark;
+  color: $chalk;
+  padding: 1rem;
+  text-align: center;
+}

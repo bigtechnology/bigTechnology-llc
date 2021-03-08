@@ -1,0 +1,55 @@
+// Set box-sizing globally for consisten behavior
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  max-width: 100%;
+}
+// Set the app container to fill the screen
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+// Variables
+$text-font: 'Oswald', sans-serif;
+$display-font: 'Bangers', sans-serif;
+
+// Media Query Sizes
+$mid: 500px;
+$tablet: 650px;
+$large: 800px;
+
+// COLOR Palette themes - https://www.canva.com/colors/color-palette-generator/
+// 1
+$bombay: #b4b5be;
+$outerspace: #333738;
+$driftwood: #b18742;
+$saltbox: #635b6c;
+$honeydew: #f0fff0;
+// 2
+$stromboli: #2e5e4e;
+$Bonjour: #dbd3d8;
+$cascade: #93a7aa;
+$hitgray: #a7b5b9;
+// 3 - Current Theme
+$shark: #2a2f33;
+$nomad: #bbb6a5;
+$mantle: #8c9491;
+$manatee: #8c8c9c;
+$chalk: #fbf7f5;
+
+#root {
+  background-color: $chalk;
+}
+
+.App > div:not(.modal-wrapper):not(.cookie-popup) {
+  min-height: 100vh;
+  background-color: $chalk;
+  display: flex;
+  flex-flow: column nowrap;
+}

@@ -1,0 +1,27 @@
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+
+  h2 {
+    padding: 1rem 0;
+    font-size: 2rem;
+    align-self: center;
+  }
+
+  .contact-info {
+    align-self: center;
+    padding: 1rem 0;
+
+    a {
+      margin: 0 0.3rem;
+      color: $shark;
+      padding: 1rem;
+      outline: none;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+}
