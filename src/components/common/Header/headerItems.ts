@@ -10,6 +10,6 @@ export const navigation = {
       to: '/',
     },
     { name: 'Contact Us', to: '/contact' },
-    { name: 'Blog', to: '/blog' },
+    // { name: 'Blog', to: '/blog' },
   ],
 };
